@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "produit1",
+      "price": 3000,
+      "checked": false
+    },
+    {
+      "id": 2,
+      "name": "produit2",
+      "price": 3200,
+      "checked": true
+    },
+    {
+      "name": "here",
+      "price": "6666",
+      "checked": false,
+      "id": 4
+    },
+    {
+      "name": "prod1222",
+      "price": "8989",
+      "checked": true,
+      "id": 5
+    }
+  ]
+}
