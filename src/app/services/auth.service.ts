@@ -12,10 +12,15 @@ export class AuthService {
   constructor( private http : HttpClient , private appState : AppStateService) { }
 
   async login( username :string , password : string): Promise<any> {
-    let user: any = await firstValueFrom(this.http.get("http://localhost:8083" + username));
-    if(password == btoa(user.password)){
+    let user: any = await firstValueFrom(this.http.get("http://localhost:8083/users/" + username));
+    /* console.log(password)
+    console.log(user.password)
+
+    console.log(atob(user.password)) */
+  
+    if(password == atob(user.password)){
        let decodedJwt: any = jwtDecode(user.token);
-       this.appState.authState({
+       this.appState.setAuthState({
         username : decodedJwt.sub,
         roles : decodedJwt.roles,
         isAuthenticated : true,

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { AppStateService } from '../services/app-state.service';
 
 @Component({
@@ -7,18 +8,25 @@ import { AppStateService } from '../services/app-state.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  actions : Array<any> = [
-    { title : "Home " , "route" : "/home" , icon : "house-gear"},
-    { title : "Product " , "route" : "/admin/products" , icon : "cart-fill"},
-    { title : "new Product " , "route" : "/admin/newProduct" , icon : "bag-plus"},
+  actions: Array<any> = [
+    { title: "Home ", "route": "/home", icon: "house-gear" },
+    { title: "Product ", "route": "/admin/products", icon: "cart-fill" },
+    { title: "new Product ", "route": "/admin/newProduct", icon: "bag-plus" },
 
   ]
-     currentAaction: any;
+  currentAaction: any;
 
-     constructor(public appState : AppStateService){}
-     
-  setCurrentAction(action : any) {
-     this.currentAaction = action;
+  constructor(public appState: AppStateService , private router:Router) { }
+
+  setCurrentAction(action: any) {
+    this.currentAaction = action;
   }
 
+  login() {
+   this.router.navigateByUrl("/login")
+  }
+  logout() {
+      this.appState.authState = {}
+      this.router.navigateByUrl("/login")
+  }
 }

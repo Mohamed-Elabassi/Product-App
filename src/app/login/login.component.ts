@@ -12,9 +12,10 @@ import { AppStateService } from '../services/app-state.service';
 export class LoginComponent implements OnInit {
   formLogin!: FormGroup;
 
+  errorMessage = undefined;
+
   constructor(private fb: FormBuilder,
-    private router: Router, private authService: AuthService,
-    private appState : AppStateService) { }
+    private router: Router, private authService: AuthService) { }
   ngOnInit() {
 
     this.formLogin = this.fb.group({
@@ -33,9 +34,7 @@ export class LoginComponent implements OnInit {
         this.router.navigateByUrl("/admin");
       })
       .catch(error => {
-          this.appState.setAuthState({
-            errorMessage : error
-          })
+        this.errorMessage = error
       })
 
   }

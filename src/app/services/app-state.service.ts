@@ -20,8 +20,7 @@ export class AppStateService {
     isAuthenticated: false,
     username: undefined,
     roles: undefined,
-    token: undefined,
-    errorMessage : undefined
+    token: undefined
   }
 
   constructor() { }
