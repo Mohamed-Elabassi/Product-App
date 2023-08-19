@@ -7,11 +7,15 @@ import { ProductsComponent } from './products/products.component';
 import { NewProductComponent } from './new-product/new-product.component';
 import { AppRoutingModule } from './app-routing.module';
 import {RouterOutlet} from "@angular/router";
-import { HttpClientModule} from "@angular/common/http";
+import { HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { EditProductComponent } from './edit-product/edit-product.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ErrorsComponent } from './errors/errors.component';
+import { AppHttpInterceptor } from './services/app-http.interceptor';
+import { LoginComponent } from './login/login.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,10 @@ import { NavbarComponent } from './navbar/navbar.component';
     NewProductComponent,
     EditProductComponent,
     DashboardComponent,
-    NavbarComponent
+    NavbarComponent,
+    ErrorsComponent,
+    LoginComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +38,9 @@ import { NavbarComponent } from './navbar/navbar.component';
     ReactiveFormsModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    { provide : HTTP_INTERCEPTORS , useClass : AppHttpInterceptor , multi : true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

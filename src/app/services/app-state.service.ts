@@ -11,16 +11,26 @@ export class AppStateService {
     totalPages: 0,
     pageSize: 2,
     currentPage: 1,
-    totalProducts : 0,
-    status : "",
-    errorMessage : ""
+    totalProducts: 0,
+    status: "",
+    errorMessage: ""
   }
 
+  public authState: any = {
+    isAuthenticated: false,
+    username: undefined,
+    roles: undefined,
+    token: undefined,
+    errorMessage : undefined
+  }
 
   constructor() { }
 
-  public setProductState(state : any) : void {
-    this.productsState = {...this.productsState , ...state }
+  public setProductState(state: any): void {
+    this.productsState = { ...this.productsState, ...state }
   }
-  
+
+  public setAuthState(state: any): void {
+    this.authState = { ...this.authState, ...state }
+  }
 }

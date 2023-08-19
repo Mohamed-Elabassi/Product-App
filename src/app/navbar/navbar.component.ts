@@ -8,9 +8,9 @@ import { AppStateService } from '../services/app-state.service';
 })
 export class NavbarComponent {
   actions : Array<any> = [
-    { title : "Home " , "route" : "/home" , icon : "house"},
-    { title : "Product " , "route" : "/products" , icon : "safe"},
-    { title : "new Product " , "route" : "/newProduct" , icon : "search"},
+    { title : "Home " , "route" : "/home" , icon : "house-gear"},
+    { title : "Product " , "route" : "/admin/products" , icon : "cart-fill"},
+    { title : "new Product " , "route" : "/admin/newProduct" , icon : "bag-plus"},
 
   ]
      currentAaction: any;

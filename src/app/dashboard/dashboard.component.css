@@ -1,0 +1,62 @@
+.p-3 {
+    padding: 1rem;
+  }
+  
+  .mt-5 {
+    margin-top: 3rem;
+  }
+  
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 1rem;
+  }
+  
+  .card-body {
+    padding: 1rem;
+  }
+  
+  .nav-pills {
+    margin-bottom: 1rem;
+  }
+  
+  .nav-pills li {
+    list-style-type: none;
+    margin-bottom: 1rem;
+  }
+  
+  .nav-pills li label {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0.5rem;
+    background-color: #f9f9f9;
+  }
+  
+  .nav-pills li label.bg-success {
+    background-color: #dff0d8;
+  }
+  
+  .nav-pills li label.bg-primary {
+    background-color: #c02942;
+  }
+  
+  .nav-pills li label.bg-danger {
+    background-color: #ff0000;
+  }
+  
+  .nav-pills li label.bg-warning {
+    background-color: #ff6900;
+  }
+  
+  .nav-pills li label.bg-info {
+    background-color: #0084ff;
+  }
+  
+  .nav-pills li label.bg-light {
+    background-color: #f5f5f5;
+  }
+  
+  .nav-pills li label.bg-dark {
+    background-color: #333333;
+  }
+  

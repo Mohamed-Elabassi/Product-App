@@ -1,16 +1,42 @@
 {
-  "products": [
+  "users": [
     {
-      "name": "here",
-      "price": "6666",
-      "checked": true,
-      "id": 4
+      "id": "user1",
+      "password": "MTIzNA==",
+      "roles": [
+        "USER"
+      ],
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyMSIsImlhdCI6MTUxNjIzOTAyMiwiZXhwIjoxNTE2MjM5MDIyLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjMwMzAvYXV0aCIsIm5iZiI6MTUxNjIzOTAyMiwiZmlyc3ROYW1lIjoiTW9oYW1lZCIsImxhc3ROYW1lIjoiZWxhYmFzc2kiLCJlbWFpbCI6Im1vZWxhYmFzc2lAZ21haWwuY29tIiwicm9sZXMiOlsiVVNFUiJdfQ.4TlLIexXyyqWuwHbqvldqzOV5HtlZ84vQNN0ZKdwtAw"
     },
     {
-      "name": "dsfsdf",
-      "price": "222",
-      "checked": true,
-      "id": 6
+      "id": "user2",
+      "password": "MTIzNA==",
+      "roles": [
+        "USER"
+      ],
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyMiIsImlhdCI6MTUxNjIzOTAyMiwiZXhwIjoxNTE2MjM5MDIyLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjMwMzAvYXV0aCIsIm5iZiI6MTUxNjIzOTAyMiwiZmlyc3ROYW1lIjoiTW9oYW1lZCIsImxhc3ROYW1lIjoiZWxhYmFzc2kiLCJlbWFpbCI6Im1vZWxhYmFzc2lAZ21haWwuY29tIiwicm9sZXMiOlsiVVNFUiJdfQ.909QNfb6tV4kAS9UNGIq-BrfwHX1V0ApHDsay8i8axI"
+    },
+    {
+      "id": "admin",
+      "password": "MTIzNA==",
+      "roles": [
+        "USER" , "ADMIN"
+      ],
+      "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTUxNjIzOTAyMiwiZXhwIjoxNTE2MjM5MDIyLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjMwMzAvYXV0aCIsIm5iZiI6MTUxNjIzOTAyMiwiZmlyc3ROYW1lIjoiTW9oYW1lZCIsImxhc3ROYW1lIjoiZWxhYmFzc2kiLCJlbWFpbCI6Im1vZWxhYmFzc2lAZ21haWwuY29tIiwicm9sZXMiOlsiVVNFUiIsIkFETUlOIl19.iUJFUlyYWXWORRgv1KzhDxDRkWhkT_m-DwhqAfWC6k0"
+    }
+  ],
+  "products": [
+    {
+      "id": 4,
+      "name": "paooa",
+      "price": "6666",
+      "checked": true
+    },
+    {
+      "id": 6,
+      "name": "meedo",
+      "price": "78889",
+      "checked": true
     },
     {
       "name": "P1",
@@ -27,14 +53,50 @@
     {
       "name": "P3",
       "price": "9999",
-      "checked": false,
+      "checked": true,
       "id": 9
     },
     {
       "name": "P4",
       "price": "9933",
-      "checked": false,
+      "checked": true,
       "id": 10
+    },
+    {
+      "name": "LOVE",
+      "price": "3293",
+      "checked": true,
+      "id": 11
+    },
+    {
+      "name": "dsfs",
+      "price": 0,
+      "checked": false,
+      "id": 12
+    },
+    {
+      "name": "EL ABASSI MOHAMED",
+      "price": "0DSFSD",
+      "checked": false,
+      "id": 13
+    },
+    {
+      "name": "El Abassi",
+      "price": "sqd",
+      "checked": true,
+      "id": 14
+    },
+    {
+      "name": "kikiki",
+      "price": "43434",
+      "checked": false,
+      "id": 15
+    },
+    {
+      "id": 17,
+      "name": "cv",
+      "price": "54652",
+      "checked": false
     }
   ]
 }
