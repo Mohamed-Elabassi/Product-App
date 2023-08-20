@@ -9,7 +9,7 @@ import { AppStateService } from '../services/app-state.service';
 })
 export class NavbarComponent {
   actions: Array<any> = [
-    { title: "Home ", "route": "/home", icon: "house-gear" },
+    { title: "Home ", "route": "/admin/home", icon: "house-gear" },
     { title: "Product ", "route": "/admin/products", icon: "cart-fill" },
     { title: "new Product ", "route": "/admin/newProduct", icon: "bag-plus" },
 
@@ -28,5 +28,6 @@ export class NavbarComponent {
   logout() {
       this.appState.authState = {}
       this.router.navigateByUrl("/login")
+
   }
 }

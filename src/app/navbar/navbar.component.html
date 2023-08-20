@@ -4,7 +4,7 @@
       aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand mb-0 h1" href="/home">Meedo</a>
+    <a class="navbar-brand mb-0 h1" href="/home">ELABASSI</a>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item" *ngFor="let action of actions">
@@ -12,14 +12,10 @@
             routerLink="{{action.route}}">{{action.title}}</a>
         </li>
       </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-success" type="submit">Search</button>
-      </form>
       <ul>
         <li *ngIf="appState.authState.isAuthenticated">
-          {{appState.authState.username}}
-          <button (click)="logout()" class="btn btn-success"> Logout</button>
+         <span >{{appState.authState.username}}</span> 
+          <button (click)="logout()" class="btn btn-success ms-2 mt-3"> Logout</button>
         </li>
         <li *ngIf="!appState.authState.isAuthenticated">
           <button  (click)="login()" class="btn btn-success"> Login</button>
